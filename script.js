@@ -38,7 +38,9 @@ const yesFinalMessages = [
   "I love you so muchhhhhh",
   "Jgn ngambek muluuuuu",
   "aku sayang kamu",
-  "Mwahhh"
+  "Mwahhh",
+  "love uuuuuu",
+  "mauu sama kamu selamanyaaa",
 ];
 
 // --- Helpers ---
