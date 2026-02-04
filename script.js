@@ -10,7 +10,9 @@ const heartsLayer = document.getElementById("heartsLayer");
 const confettiLayer = document.getElementById("confettiLayer");
 
 const romanticAudio = document.getElementById("romanticAudio");
+const noAudio = document.getElementById("noAudio"); // 🔊 tambahan
 const playingText = document.getElementById("playingText");
+
 
 let noClicks = 0;
 let yesScale = 1;
@@ -191,13 +193,31 @@ function playSongAfterYes(){
 setInterval(() => {
   if (locked) return;
   spawnTinyHeart();
+
 }, 900);
+function unlockAudio(){
+  // trigger kecil biar audio kebuka di HP
+  romanticAudio.play().then(() => {
+    romanticAudio.pause();
+    romanticAudio.currentTime = 0;
+  }).catch(()=>{});
+
+  noAudio.play().then(() => {
+    noAudio.pause();
+    noAudio.currentTime = 0;
+  }).catch(()=>{});
+}
 
 // --- NO click ---
 noBtn.addEventListener("click", () => {
   if (locked) return;
 
+  // 🔊 backsound tiap pencet NO
+  noAudio.currentTime = 0;
+  noAudio.play().catch(() => {});
+
   noClicks++;
+
 
   vibrateTiny();
 
