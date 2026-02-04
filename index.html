@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A question 💍</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background overlay -->
+  <div class="bg-aurora" aria-hidden="true"></div>
+
+  <!-- Tiny floating hearts container -->
+  <div class="hearts-layer" id="heartsLayer" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <section class="card" id="mainCard">
+      <div class="badge">
+        <img src="assets/ring.png" alt="Ring" class="ring" onerror="this.style.display='none'">
+        <span>TEKAN YES</span>
+      </div>
+
+      <h1 class="title">Will you marry me? 💍</h1>
+      <p class="subtitle">say yes yaa jlkkk 🥺</p>
+
+      <p class="reaction" id="reactionText">PENCET YESS!!!!!!! </p>
+
+      <div class="btn-row">
+        <button class="btn btn-yes" id="yesBtn">
+          YES 
+        </button>
+
+        <button class="btn btn-no" id="noBtn">
+          NO 
+        </button>
+      </div>
+
+      <p class="hint">PENCET YESSSSSS</p>
+    </section>
+
+    <!-- Success Screen -->
+    <section class="success hidden" id="successScreen" aria-live="polite">
+      <div class="success-card">
+        <div class="success-top">
+          <div class="pulse-heart">💗</div>
+          <h2 class="success-title">GITULAAAA</h2>
+          <p class="success-sub" id="playingText">🔊 Playing...</p>
+        </div>
+
+        <div class="lines" id="finalLines">
+          <!-- lines injected by JS -->
+        </div>
+
+        <div class="footer-note">
+          <span>Made with love </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confetti (very light) -->
+    <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  </main>
+
+  <!-- Audio -->
+  <audio id="romanticAudio" preload="auto">
+    <source src="assets/romantic.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
