@@ -34,10 +34,10 @@ const noReactions = [
 ];
 
 const yesFinalMessages = [
-  "Makasih bilang yes yaahhh sayangg",
+  "makasih uda pencet yes yaa sayangg",
   "I love you so muchhhhhh",
   "Jgn ngambek muluuuuu",
-  "LOVE uuuuuu",
+  "aku sayang kamu",
   "Mwahhh"
 ];
 
