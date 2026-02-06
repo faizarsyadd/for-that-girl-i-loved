@@ -171,7 +171,7 @@ function typeFinalLines(){
 }
 
 function playSongAfterYes(){
-  playingText.textContent = "🔊 Playing...";
+  playingText.textContent = "🔊 Playing....";
   romanticAudio.volume = 0.95;
 
   const p = romanticAudio.play();
@@ -179,13 +179,13 @@ function playSongAfterYes(){
     p.then(() => {
       // ok
     }).catch(() => {
-      playingText.textContent = "🔇 Tap again to enable sound";
+      playingText.textContent = "🔇 Tap to enable sound";
       // allow tap to retry
       successScreen.addEventListener("click", () => {
         romanticAudio.play().then(() => {
-          playingText.textContent = "🔊 Playing...";
+          playingText.textContent = "🔊 Playing....";
         }).catch(() => {
-          playingText.textContent = "🔇 Sound blocked by browser";
+          playingText.textContent = "🔇 Sound blocked by";
         });
       }, { once: true });
     });
